@@ -1,0 +1,16 @@
+{% extends "utility_base.html" %}
+{% block title %}Delete Room{% endblock %}
+{% block content %}
+<center>
+<h1>Delete Room</h1>
+<h1>Rooms List</h1>
+<h2>Choose The Rooms to delete</h2>
+<form action = "{{ url_for('delete_room_delete') }}" method="POST">
+{% for i in range(1,rl) %}
+	<input type="checkbox" name="room" value = "{{ rooms[i] }}" id = "{{ rooms[i] }}">
+	<p>{{ rooms[i] }}</p>
+{% endfor %}
+<button type = "submit">Delete Room(s)</button>
+</form>
+</center>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "utility_base.html" %}
+{% block title %}New Room {% endblock title%}
+{% block content %}
+	<h1></h1>
+	<center>
+	<h1>Create New Room</h1>
+	<form action = "{{ url_for('new_room_create') }}" method="POST">
+		<input type = "text" name = "roomName" id = "roomName" class="roomName" placeholder="Enter Room Name">
+		<p></p>
+		<button type = "submit">Create Room</button>
+	</form>
+	</center>
+{% endblock %}

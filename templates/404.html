@@ -1,0 +1,15 @@
+{% extends "utility_base.html" %}
+
+{% block title %}Page Not Found {% endblock %}
+
+{% block content %}
+<center>
+	<h1>404 Page Not Found Error</h1>
+    <h1>Sorry, the page you are looking for does not exist!</h1>
+    <br/>
+    <h4>Go to <a href={{url_for('login')}}>login page</a> to start chating.</h4>
+    <br/>
+    <hr>
+    <p>Have not registered? <a href={{url_for('index')}}>Register here</a>.</p>
+</center>
+{% endblock %}
